@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 307px;
+  height: 73px;
+  padding: 18px 38px 18px 42px;
+  font-weight: $fontWeightBlack;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightNormal;
+  vertical-align: middle;
+  text-align: center;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: url("../img/button_bg.png") top no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-position: 0 -73px;
+    outline: none;
+  }
+
+  &:active {
+    padding-top: 19px;
+  }
+}

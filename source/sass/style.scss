@@ -11,7 +11,10 @@
 @import "misc/extends", "blocks/visually-hidden";
 
 // Подключаем основные стили
-@import "misc/base", "blocks/page";
+@import "misc/base", "blocks/page", "blocks/button";
 
 // Подключаем стили шапки
 @import "blocks/header", "blocks/logo", "blocks/phone";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";

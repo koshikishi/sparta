@@ -1,30 +1,9 @@
 .header {
   @extend %container-wrapper;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 626px;
-    background: url("../img/hero_bg-mobile.jpg") center no-repeat $colorBackgroundHero;
-
-    @media (min-width: 750px) {
-      height: 602px;
-      background-image: url("../img/hero_bg-tablet.jpg");
-    }
-
-    @media (min-width: 1170px) {
-      height: 1006px;
-      background-image: url("../img/hero_bg-desktop.jpg");
-    }
-  }
 }
 
 .header__inner {
   @extend %container-inner;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

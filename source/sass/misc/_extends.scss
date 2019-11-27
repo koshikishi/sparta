@@ -12,11 +12,12 @@
   margin-left: auto;
 
   @media (min-width: 750px) {
-    width: 750px;
+    width: auto;
+    max-width: 750px;
   }
 
   @media (min-width: 1170px) {
-    width: 1170px;
+    max-width: 1170px;
   }
 }
 
