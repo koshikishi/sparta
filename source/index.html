@@ -428,5 +428,24 @@
         <a class="phone phone--footer footer__phone" href="tel:+79304150252">+7 (930) 415 02 52</a>
       </div>
     </footer>
+    <div class="overlay"></div>
+    <section class="modal">
+      <h2 class="modal__title">Попробуй выжить</h2>
+      <p class="modal__text">Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки</p>
+      <form class="contacts-form modal__contacts-form" action="#" method="post">
+        <div class="contacts-form__field">
+          <label class="visually-hidden" for="name_modal">Имя</label>
+          <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+        </div>
+        <div class="contacts-form__field">
+          <label class="visually-hidden" for="phone_modal">Телефон</label>
+          <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
   </body>
 </html>
