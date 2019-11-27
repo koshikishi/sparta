@@ -1,3 +1,21 @@
+// Задаём цвета сайта
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+$colorPrimary: #ff0000;
+
+$colorText: #4c4c4c;
+$colorTextDays: #1b1916;
+$colorTextCurve: #cccccc;
+$colorTextFooter: #3c313b;
+
+$colorTitleShadow: #32383f;
+
+$colorLine: #666666;
+
+$colorBackground: #1f262e;
+$colorBackgroundHero: #a08886;
+
 // Задаём характеристики шрифта и текста
 $fontWeightLight: 300;
 $fontWeightNormal: 400;
@@ -5,3 +23,50 @@ $fontWeightMedium: 500;
 $fontWeightBold: 600;
 $fontWeightHeavy: 800;
 $fontWeightBlack: 900;
+
+$fontSizeTextTiny: 14px;
+$fontSizeTextSmall: 14.4px;
+$fontSizeText: 16px;
+$fontSizeTextLarge: 18px;
+$fontSizeTextHuge: 24px;
+
+$fontSizeTitleMobile: 36px;
+$fontSizeTitleTablet: 48px;
+$fontSizeTitleDesktop: 68px;
+$fontSizeTitleHeroMobile: 38px;
+$fontSizeTitleHeroTablet: 40px;
+$fontSizeTitleHeroFirstMobile: 102px;
+$fontSizeTitleHeroFirstTablet: 107px;
+$fontSizeTitleContacts: 65px;
+$fontSizeTitleModal: 53px;
+$fontSizeTitleShadowMobile: 100px;
+$fontSizeTitleShadowTablet: 120px;
+$fontSizeTitleShadowDesktop: 180px;
+$fontSizeTitleShadowMedium: 130px;
+$fontSizeSubtitle: 20px;
+
+$fontSizeCallToActionMobile: 27px;
+$fontSizeCallToActionTablet: 30px;
+$fontSizeCallToActionDesktop: 41.38px;
+$fontSizeCallToActionFirstMobile: 80px;
+$fontSizeCallToActionFirstTablet: 90px;
+$fontSizeCallToActionFirstDesktop: 120.7px;
+$fontSizeProgramCallMobile: 54px;
+$fontSizeProgramCallTablet: 60px;
+$fontSizeProgramCallDesktop: 87px;
+$fontSizeNumberTiny: 45.92px;
+$fontSizeNumberSmall: 72px;
+$fontSizeNumberLarge: 140px;
+$fontSizeNumberHuge: 205.87px;
+$fontSizeExclamationSmall: 75.72px;
+$fontSizeExclamationLarge: 93.34px;
+
+$lineHeightNormal: 1.2;
+$lineHeightText: 1.5;
+
+$fontFamilyText: "Core Sans E", "Arial", sans-serif;
+$fontFamilyTitle: "Besom", "Comic Sans MS", "Brush Script MT", cursive;
+
+$letterSpacing: 0.05em;
+$letterSpacingLarge: 0.7em;
+$letterSpacingHuge: 1em;

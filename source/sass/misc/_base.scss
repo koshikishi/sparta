@@ -2,6 +2,11 @@ a {
   text-decoration: none;
 }
 
+a[href],
+button {
+  cursor: url("data:image/gif;base64,R0lGODlhDwAQAPEBAAAAAP///wAAAAAAACH5BAEAAAIALAAAAAAPABAAAAIzlA1wyxChWHtRHgftwqlbTkFRIoDQmVDYw6rs2lJl7NTy/KI3bNdb3pvEMhIesdFRkAQFADs=") 5 0, pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
