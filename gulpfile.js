@@ -101,8 +101,9 @@ exports.img = img;
 exports.webp = function () {
   return src(`source/img/*.{png,jpg}`)
     .pipe(webp({
-      quality: 80,
-      method: 6
+      quality: 75,
+      alphaQuality: 75,
+      method: 5
     }))
     .pipe(dest(`build/img`));
 };
@@ -119,6 +120,7 @@ function copy() {
     `source/fonts/**/*.{woff,woff2,otf}`,
     `source/img/**`,
     `!source/img/icon-*.svg`,
+    `source/video/**`,
     `source/*.ico`
   ], {
     base: `source`
