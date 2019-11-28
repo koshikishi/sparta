@@ -31,3 +31,15 @@
     margin-bottom: 72px;
   }
 }
+
+.page__features {
+  margin-bottom: 21px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 123px;
+  }
+}
