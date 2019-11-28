@@ -1,0 +1,352 @@
+.features {
+  @extend %container-wrapper;
+
+  @media (max-width: 749px) {
+    overflow: hidden;
+  }
+}
+
+.features__title {
+  @extend %title;
+  margin-bottom: 43px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 95px;
+
+    @media (max-width: 1169px) {
+      &::before {
+        font-size: $fontSizeTitleShadowMedium;
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 98px;
+  }
+}
+
+.features__inner {
+  @extend %container-inner;
+}
+
+.features__content {
+  @media (min-width: 750px) {
+    position: relative;
+    padding-top: 60px;
+    background: url("../img/features_bg-tablet.svg") 131px top no-repeat;
+  }
+
+  @media (min-width: 1170px) {
+    padding-top: 28px;
+    background-image: url("../img/features_bg-desktop.svg");
+    background-position: 155px top;
+  }
+}
+
+.features__point {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeTextHuge;
+  line-height: $lineHeightNormal;
+  text-align: center;
+  color: $colorPrimary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: content-box currentColor;
+    border: 5px solid rgba($colorPrimary, 0.1);
+    border-radius: 50%;
+  }
+
+  &--start {
+    &::after {
+      top: 45px;
+      left: 49%;
+    }
+
+    @media (max-width: 749px) {
+      margin-bottom: 75px;
+      padding-left: 11px;
+    }
+  }
+
+  &--finish {
+    &::after {
+      top: -32px;
+      left: 47%;
+    }
+  }
+
+  @media (min-width: 750px) {
+    position: absolute;
+
+    &--start {
+      top: 36px;
+      left: 599px;
+
+      &::after {
+        left: 17px;
+      }
+    }
+
+    &--finish {
+      bottom: 179px;
+      left: 212px;
+
+      &::after {
+        left: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    &--start {
+      left: 822px;
+    }
+
+    &--finish {
+      bottom: 62px;
+      left: 238px;
+    }
+  }
+}
+
+.features__list {
+  @extend %list-reset;
+
+  @media (max-width: 749px) {
+    text-align: center;
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: center no-repeat;
+  }
+
+  @media (max-width: 749px) {
+    &::before {
+      right: 0;
+      left: 0;
+    }
+
+    &--knowledge {
+      &::before {
+        height: 237px;
+      }
+    }
+
+    &--skills {
+      &::before {
+        height: 243px;
+      }
+    }
+
+    &--extreme {
+      &::before {
+        height: 333px;
+        background-position: left;
+      }
+    }
+
+    &--stress {
+      margin-bottom: 84px;
+
+      &::before {
+        height: 241px;
+        background-position: 19px;
+      }
+    }
+  }
+
+  &--knowledge {
+    margin-bottom: 48px;
+    padding-top: 253px;
+
+    &::before {
+      background-image: url("../img/features_knowledge-mobile.jpg");
+    }
+  }
+
+  &--skills {
+    margin-bottom: 39px;
+    padding-top: 261px;
+
+    &::before {
+      background-image: url("../img/features_skills-mobile.jpg");
+    }
+  }
+
+  &--extreme {
+    margin-bottom: 48px;
+    padding-top: 353px;
+
+    &::before {
+      left: -6px;
+      background-image: url("../img/features_extreme-mobile.jpg");
+    }
+  }
+
+  &--stress {
+    padding-top: 258px;
+
+    &::before {
+      background-image: url("../img/features_stress-mobile.jpg");
+    }
+  }
+
+  @media (min-width: 750px) {
+    width: 320px;
+
+    &::before {
+      bottom: 0;
+      left: 0;
+    }
+
+    &--knowledge {
+      margin-bottom: 25px;
+      padding-top: 62px;
+      padding-bottom: 65px;
+      padding-left: 330px;
+
+      &::before {
+        left: 11px;
+        width: 290px;
+        background-image: url("../img/features_knowledge-tablet.png");
+      }
+    }
+
+    &--skills {
+      margin-bottom: -5px;
+      margin-left: auto;
+      padding-top: 65px;
+      padding-bottom: 68px;
+
+      &::before {
+        width: 291px;
+        background-image: url("../img/features_skills-tablet.png");
+      }
+    }
+
+    &--extreme {
+      margin-bottom: -38px;
+      padding-top: 60px;
+      padding-bottom: 91px;
+      padding-left: 329px;
+
+      &::before {
+        left: -7px;
+        width: 320px;
+        background-image: url("../img/features_extreme-tablet.png");
+      }
+    }
+
+    &--stress {
+      width: 282px;
+      margin-left: auto;
+      padding-top: 285px;
+      padding-left: 52px;
+
+      &::before {
+        background-image: url("../img/features_stress-tablet.png");
+      }
+    }
+
+    @media (max-width: 1169px) {
+      &--skills {
+        padding-right: 290px;
+
+        &::before {
+          right: 5px;
+          left: auto;
+        }
+      }
+
+      &--stress {
+        &::before {
+          right: 0;
+          bottom: auto;
+          height: 280px;
+          background-position: left;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    &--knowledge {
+      margin-bottom: -37px;
+      padding-top: 111px;
+      padding-bottom: 79px;
+      padding-left: 415px;
+
+      &::before {
+        left: 25px;
+        width: 366px;
+        background-image: url("../img/features_knowledge-desktop.png");
+      }
+    }
+
+    &--skills {
+      width: 298px;
+      margin-bottom: -64px;
+      padding-top: 103px;
+      padding-bottom: 99px;
+      padding-left: 394px;
+
+      &::before {
+        width: 373px;
+        background-image: url("../img/features_skills-desktop.png");
+      }
+    }
+
+    &--extreme {
+      margin-bottom: -88px;
+      padding-top: 81px;
+      padding-bottom: 122px;
+      padding-left: 355px;
+
+      &::before {
+        left: -35px;
+        width: 374px;
+        background-image: url("../img/features_extreme-desktop.png");
+      }
+    }
+
+    &--stress {
+      width: 288px;
+      padding-top: 64px;
+      padding-bottom: 123px;
+      padding-left: 416px;
+
+      &::before {
+        width: 393px;
+        background-image: url("../img/features_stress-desktop.png");
+      }
+    }
+  }
+}
+
+.features__item-title {
+  @extend %subtitle;
+  margin-bottom: 14px;
+}
+
+.features__item-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
