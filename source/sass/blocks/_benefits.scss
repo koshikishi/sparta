@@ -1,13 +1,15 @@
 .benefits {
   @extend %container-wrapper;
-  background: url("../img/benefits_bg-mobile.jpg") top / auto 100% no-repeat $colorBackground;
+  background: url("../img/benefits_bg-mobile.jpg") top / 750px 100% no-repeat $colorBackground;
 
   @media (min-width: 750px) {
     background-image: url("../img/benefits_bg-tablet.jpg");
+    background-size: 1170px 100%;
   }
 
   @media (min-width: 1170px) {
     background-image: url("../img/benefits_bg-desktop.jpg");
+    background-size: 1920px 100%;
   }
 }
 
