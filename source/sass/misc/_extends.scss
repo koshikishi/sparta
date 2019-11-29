@@ -32,6 +32,8 @@
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
   font-weight: $fontWeightBlack;
   font-size: $fontSizeTitleMobile;
   line-height: $lineHeightNormal;
@@ -56,14 +58,16 @@
   }
 
   @media (max-width: 749px) {
-    padding-top: 31px;
+    width: 290px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 750px) {
     font-size: $fontSizeTitleTablet;
 
     &::before {
-      top: -38px;
+      top: -37px;
       font-size: $fontSizeTitleShadowTablet;
     }
   }
