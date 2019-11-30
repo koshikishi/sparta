@@ -75,3 +75,13 @@
     margin-bottom: 151px;
   }
 }
+
+.page__skills {
+  @media (min-width: 750px) {
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 137px;
+  }
+}
