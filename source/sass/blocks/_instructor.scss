@@ -1,0 +1,246 @@
+.instructor {
+  @extend %container-wrapper;
+
+  @media (max-width: 749px) {
+    overflow: hidden;
+  }
+}
+
+.instructor__title {
+  @extend %title;
+  margin-bottom: 51px;
+
+  @media (max-width: 749px) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: 750px) {
+    margin-bottom: 63px;
+
+    @media (max-width: 1169px) {
+      &::before {
+        top: -32px;
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 80px;
+  }
+}
+
+.instructor__inner {
+  @extend %container-inner;
+}
+
+.instructor__content {
+  margin-bottom: 44px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: 1170px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 45px;
+    padding-right: 71px;
+    padding-left: 15px;
+  }
+}
+
+.instructor__photo {
+  img {
+    display: block;
+    width: 290px;
+    margin-right: auto;
+    margin-bottom: 17px;
+    margin-left: auto;
+
+    @media (min-width: 1170px) {
+      width: 310px;
+    }
+  }
+}
+
+.instructor__info {
+  @media (min-width: 750px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 1169px) {
+      padding-right: 15px;
+      padding-left: 9px;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    width: 738px;
+  }
+}
+
+.instructor__name {
+  @extend %subtitle;
+  margin-bottom: 30px;
+  font-size: $fontSizeTextHuge;
+  color: $colorPrimary;
+
+  @media (max-width: 749px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @media (min-width: 750px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1169px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 33px;
+    padding-left: 10px;
+  }
+}
+
+.instructor__text {
+  padding-left: 59px;
+  background-repeat: no-repeat;
+
+  &:nth-child(even) {
+    background-image: url("../img/instructor_text-bg-01-mobile.png");
+    background-position: -1px 6px;
+  }
+
+  &:nth-child(odd) {
+    background-image: url("../img/instructor_text-bg-02.png");
+    background-position: 11px 3px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 749px) {
+    margin-bottom: 26px;
+
+    &:nth-child(even) {
+      padding-right: 10px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 32px;
+    }
+  }
+
+  @media (min-width: 750px) {
+    &:nth-child(even) {
+      width: 339px;
+      padding-left: 71px;
+      background-image: url("../img/instructor_text-bg-01-desktop.png");
+      background-position: 0 5px;
+    }
+
+    &:nth-child(odd) {
+      width: 229px;
+      padding-top: 9px;
+      background-position: 6px 5px;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    &:nth-child(even) {
+      padding-left: 62px;
+    }
+
+    &:nth-child(odd) {
+      width: 234px;
+      padding-top: 1px;
+      padding-left: 56px;
+    }
+  }
+}
+
+.instructor__achievements {
+  @extend %list-reset;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 750px) and (max-width: 1169px) {
+    columns: 2;
+    column-gap: 30px;
+  }
+
+  @media (min-width: 1170px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1070px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 22px;
+  }
+}
+
+.instructor__achievement {
+  position: relative;
+  letter-spacing: $letterSpacing;
+
+  &::before {
+    content: attr(data-count);
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font: #{$fontSizeTitleShadowMobile}/#{$lineHeightNormal} $fontFamilyTitle;
+    color: $colorPrimary;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 750px) {
+    width: 200px;
+    margin-bottom: 36px;
+
+    &::before {
+      top: -4px;
+      font-size: $fontSizeTitleShadowTablet;
+    }
+  }
+
+  @media (max-width: 1169px) {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 120px;
+
+    @media (min-width: 750px) {
+      padding-left: 125px;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    margin-right: 90px;
+    padding-top: 137px;
+    text-align: center;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(4n),
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
