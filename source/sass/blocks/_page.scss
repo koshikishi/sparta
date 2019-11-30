@@ -63,3 +63,15 @@
     margin-bottom: 130px;
   }
 }
+
+.page__call-to-action {
+  margin-bottom: 42px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 151px;
+  }
+}
