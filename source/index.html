@@ -449,21 +449,25 @@
     </footer>
     <div class="overlay"></div>
     <section class="modal">
-      <h2 class="modal__title">Попробуй выжить</h2>
-      <p class="modal__text">Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки</p>
-      <form class="contacts-form modal__contacts-form" action="#" method="post">
-        <div class="contacts-form__inner">
-          <div class="contacts-form__field">
-            <label class="visually-hidden" for="name_modal">Имя</label>
-            <input id="name_modal" type="text" name="name" placeholder="Имя" required>
-          </div>
-          <div class="contacts-form__field">
-            <label class="visually-hidden" for="phone_modal">Телефон</label>
-            <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
-          </div>
+      <div class="modal__inner">
+        <div class="modal__content">
+          <h2 class="modal__title">Попробуй выжить</h2>
+          <p class="modal__text">Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки</p>
         </div>
-        <button class="button contacts-form__button" type="submit">Отправить</button>
-      </form>
+        <form class="contacts-form" action="#" method="post">
+          <div class="contacts-form__inner">
+            <div class="contacts-form__field">
+              <label class="visually-hidden" for="name_modal">Имя</label>
+              <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+            </div>
+            <div class="contacts-form__field">
+              <label class="visually-hidden" for="phone_modal">Телефон</label>
+              <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
+            </div>
+          </div>
+          <button class="button button--wide contacts-form__button" type="submit">Отправить</button>
+        </form>
+      </div>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
