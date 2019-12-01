@@ -67,12 +67,24 @@
 .page__call-to-action {
   margin-bottom: 42px;
 
+  .page__container & {
+    margin-bottom: 35px;
+  }
+
   @media (min-width: 750px) {
     margin-bottom: 76px;
+
+    .page__container & {
+      margin-bottom: 79px;
+    }
   }
 
   @media (min-width: 1170px) {
     margin-bottom: 151px;
+
+    .page__container & {
+      margin-bottom: 158px;
+    }
   }
 }
 
@@ -121,5 +133,15 @@
 
   @media (min-width: 1170px) {
     margin-bottom: 26px;
+  }
+}
+
+.page__container {
+  @media (min-width: 750px) {
+    background: url("../img/testimonials_bg.jpg") center 60px no-repeat;
+  }
+
+  @media (min-width: 1170px) {
+    background-position: center 129px;
   }
 }
