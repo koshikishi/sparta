@@ -9,22 +9,42 @@
 
   @media (min-width: 750px) {
     min-height: 865px;
-    background-image:
-      url("../img/skills_bg-line-desktop.svg"),
-      url("../img/skills_bg-tablet.jpg");
     background-position:
       calc(50% - 143px) 84px,
       calc(50% - 263px) 249px;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/skills_bg-line-desktop.svg"),
+        url("../img/skills_bg-tablet.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/skills_bg-line-desktop.svg"),
+        url("../img/skills_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1170px) {
     min-height: 933px;
-    background-image:
-      url("../img/skills_bg-line-desktop.svg"),
-      url("../img/skills_bg-desktop.jpg");
     background-position:
       calc(50% + 20px) 120px,
       calc(50% - 439px) 60px;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/skills_bg-line-desktop.svg"),
+        url("../img/skills_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/skills_bg-line-desktop.svg"),
+        url("../img/skills_bg-desktop.webp");
+    }
   }
 }
 

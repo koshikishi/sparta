@@ -14,9 +14,17 @@
   letter-spacing: $letterSpacing;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  background: url("../img/button_bg.png") top no-repeat;
+  background: top no-repeat;
   border: none;
-  cursor: pointer;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/button_bg.png");
+  }
+
+  .webp & {
+    background-image: url("../img/button_bg.webp");
+  }
 
   &:hover,
   &:focus {

@@ -96,36 +96,76 @@
 
     &:nth-child(1) {
       &::before {
-        background-image: url("../img/knowledge_01-bg-mobile.jpg");
         background-position: -23px -12px;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/knowledge_01-bg-mobile.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/knowledge_01-bg-mobile.webp");
+        }
       }
     }
 
     &:nth-child(2) {
       &::before {
-        background-image: url("../img/knowledge_02-bg-mobile.jpg");
         background-position: -48px 10px;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/knowledge_02-bg-mobile.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/knowledge_02-bg-mobile.webp");
+        }
       }
     }
 
     &:nth-child(3) {
       &::before {
-        background-image: url("../img/knowledge_03-bg-mobile.jpg");
         background-position: -21px -4px;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/knowledge_03-bg-mobile.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/knowledge_03-bg-mobile.webp");
+        }
       }
     }
 
     &:nth-child(4) {
       &::before {
-        background-image: url("../img/knowledge_04-bg-mobile.jpg");
         background-position: -107px -8px;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/knowledge_04-bg-mobile.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/knowledge_04-bg-mobile.webp");
+        }
       }
     }
 
     &:nth-child(5) {
       &::before {
-        background-image: url("../img/knowledge_05-bg-mobile.jpg");
         background-position: -65px -30px;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/knowledge_05-bg-mobile.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/knowledge_05-bg-mobile.webp");
+        }
       }
     }
   }
@@ -164,36 +204,76 @@
     @supports (background-clip: text) {
       &:nth-child(1) {
         &::before {
-          background-image: url("../img/knowledge_01-bg-desktop.jpg");
           background-position: -58px -16px;
+
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/knowledge_01-bg-desktop.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/knowledge_01-bg-desktop.webp");
+          }
         }
       }
 
       &:nth-child(2) {
         &::before {
-          background-image: url("../img/knowledge_02-bg-desktop.jpg");
           background-position: -51px 37px;
+
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/knowledge_02-bg-desktop.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/knowledge_02-bg-desktop.webp");
+          }
         }
       }
 
       &:nth-child(3) {
         &::before {
-          background-image: url("../img/knowledge_03-bg-desktop.jpg");
           background-position: -253px -66px;
+
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/knowledge_03-bg-desktop.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/knowledge_03-bg-desktop.webp");
+          }
         }
       }
 
       &:nth-child(4) {
         &::before {
-          background-image: url("../img/knowledge_04-bg-desktop.jpg");
           background-position: -274px -102px;
+
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/knowledge_04-bg-desktop.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/knowledge_04-bg-desktop.webp");
+          }
         }
       }
 
       &:nth-child(5) {
         &::before {
-          background-image: url("../img/knowledge_05-bg-desktop.jpg");
           background-position: -72px -25px;
+
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/knowledge_05-bg-desktop.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/knowledge_05-bg-desktop.webp");
+          }
         }
       }
     }
@@ -264,8 +344,17 @@
   @extend %list-reset;
   padding-right: 13px;
   padding-left: 13px;
-  background: url("../img/knowledge_extra-mobile.png") 13px 0 no-repeat;
+  background: 13px 0 no-repeat;
   counter-reset: number;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/knowledge_extra-mobile.png");
+  }
+
+  .webp & {
+    background-image: url("../img/knowledge_extra-mobile.webp");
+  }
 
   @media (min-width: 750px) {
     display: flex;
@@ -273,7 +362,15 @@
     width: 1114px;
     margin-right: auto;
     margin-left: auto;
-    background-image: url("../img/knowledge_extra-desktop.png");
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/knowledge_extra-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/knowledge_extra-desktop.webp");
+    }
   }
 }
 

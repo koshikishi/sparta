@@ -38,8 +38,17 @@
     left: 50%;
     width: 351px;
     height: 14px;
-    background: url("../img/header_text-blur.png") no-repeat;
+    background-repeat: no-repeat;
     transform: translateX(-50%);
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/header_text-blur.png");
+    }
+
+    .webp & {
+      background-image: url("../img/header_text-blur.webp");
+    }
   }
 
   @media (max-width: 749px) {

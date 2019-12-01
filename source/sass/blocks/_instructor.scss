@@ -106,13 +106,29 @@
   background-repeat: no-repeat;
 
   &:nth-child(even) {
-    background-image: url("../img/instructor_text-bg-01-mobile.png");
     background-position: -1px 6px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/instructor_text-bg-01-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/instructor_text-bg-01-mobile.webp");
+    }
   }
 
   &:nth-child(odd) {
-    background-image: url("../img/instructor_text-bg-02.png");
     background-position: 11px 3px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/instructor_text-bg-02.png");
+    }
+
+    .webp & {
+      background-image: url("../img/instructor_text-bg-02.webp");
+    }
   }
 
   p {
@@ -140,8 +156,16 @@
     &:nth-child(even) {
       width: 339px;
       padding-left: 71px;
-      background-image: url("../img/instructor_text-bg-01-desktop.png");
       background-position: 0 5px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/instructor_text-bg-01-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/instructor_text-bg-01-desktop.webp");
+      }
     }
 
     &:nth-child(odd) {

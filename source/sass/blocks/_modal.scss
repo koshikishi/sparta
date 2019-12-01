@@ -6,7 +6,16 @@
   display: none;
   box-sizing: border-box;
   height: 675px;
-  background: url("../img/modal_bg.png") 0 12px no-repeat;
+  background: 0 12px no-repeat;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/modal_bg.png");
+  }
+
+  .webp & {
+    background-image: url("../img/modal_bg.webp");
+  }
 
   &--shown {
     display: block;
@@ -102,8 +111,17 @@
   width: 21px;
   height: 23px;
   padding: 0;
-  background: url("../img/modal_close.png") 0 0 no-repeat;
+  background: 0 0 no-repeat;
   border: none;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/modal_close.png");
+  }
+
+  .webp & {
+    background-image: url("../img/modal_close.webp");
+  }
 
   &:hover,
   &:focus {

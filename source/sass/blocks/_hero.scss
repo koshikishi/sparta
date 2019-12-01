@@ -8,11 +8,28 @@
     right: 0;
     left: 0;
     height: 626px;
-    background: url("../img/hero_bg-mobile.jpg") center no-repeat $colorBackgroundHero;
+    background: center no-repeat $colorBackgroundHero;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/hero_bg-mobile.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/hero_bg-mobile.webp");
+    }
 
     @media (min-width: 750px) {
       height: 602px;
-      background-image: url("../img/hero_bg-tablet.jpg");
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/hero_bg-tablet.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/hero_bg-tablet.webp");
+      }
 
       @media (max-width: 907px) {
         background-position: calc(50% + 123px) 0;
@@ -35,7 +52,15 @@
 
     @media (min-width: 1170px) {
       height: 1006px;
-      background-image: url("../img/hero_bg-desktop.jpg");
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/hero_bg-desktop.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/hero_bg-desktop.webp");
+      }
     }
 
     @media (min-width: 1920px) {
@@ -159,7 +184,16 @@
   color: $colorTextDays;
   text-transform: uppercase;
   letter-spacing: $letterSpacing;
-  background: url('../img/hero_timetable.png') center no-repeat;
+  background: center no-repeat;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/hero_timetable.png");
+  }
+
+  .webp & {
+    background-image: url("../img/hero_timetable.webp");
+  }
 
   span {
     margin-right: 10px;

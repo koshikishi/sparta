@@ -1,15 +1,40 @@
 .benefits {
   @extend %container-wrapper;
-  background: url("../img/benefits_bg-mobile.jpg") top / 750px 100% no-repeat $colorBackground;
+  background: top / 750px 100% no-repeat $colorBackground;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/benefits_bg-mobile.jpg");
+  }
+
+  .webp & {
+    background-image: url("../img/benefits_bg-mobile.webp");
+  }
 
   @media (min-width: 750px) {
-    background-image: url("../img/benefits_bg-tablet.jpg");
     background-size: 1170px 100%;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_bg-tablet.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1170px) {
-    background-image: url("../img/benefits_bg-desktop.jpg");
     background-size: 1920px 100%;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_bg-desktop.webp");
+    }
   }
 }
 
@@ -39,10 +64,21 @@
 
   &--highlighted {
     padding: 63px 19px 45px;
-    background: url("../img/benefits_list-bg-mobile.png") center -2px no-repeat;
+    background: center -2px no-repeat;
     border: solid $colorPrimary;
     border-width: 7px 5px 8px;
-    border-image: url("../img/benefits_list-border-mobile.png") 7 5 8 / auto repeat;
+    border-image: 7 5 8 / auto repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_list-bg-mobile.png");
+      border-image-source: url("../img/benefits_list-border-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_list-bg-mobile.webp");
+      border-image-source: url("../img/benefits_list-border-mobile.webp");
+    }
   }
 
   @media (min-width: 750px) {
@@ -53,11 +89,20 @@
 
     &--highlighted {
       padding: 35px 25px 42px 26px;
-      background-image: url("../img/benefits_list-bg-tablet.png");
       background-position: -6px -5px;
       border-width: 6px 8px 6px 7px;
-      border-image-source: url("../img/benefits_list-border-tablet.png");
       border-image-slice: 6 8 6 7;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_list-bg-tablet.png");
+        border-image-source: url("../img/benefits_list-border-tablet.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_list-bg-tablet.webp");
+        border-image-source: url("../img/benefits_list-border-tablet.webp");
+      }
     }
   }
 
@@ -66,11 +111,20 @@
 
     &--highlighted {
       padding: 42px 34px 36px 64px;
-      background-image: url("../img/benefits_list-bg-desktop.png");
       background-position: -9px -8px;
       border-width: 9px 10px 9px 11px;
-      border-image-source: url("../img/benefits_list-border-desktop.png");
       border-image-slice: 9 10 9 11;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_list-bg-desktop.png");
+        border-image-source: url("../img/benefits_list-border-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_list-bg-desktop.webp");
+        border-image-source: url("../img/benefits_list-border-desktop.webp");
+      }
     }
   }
 }
@@ -101,7 +155,16 @@
       padding-left: 12px;
       font: $fontWeightNormal #{$fontSizeExclamationSmall}/#{$lineHeightNormal} $fontFamilyTitle;
       text-align: center;
-      background: url("../img/benefits_exclamation-bg-mobile.png") center no-repeat;
+      background: center no-repeat;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_exclamation-bg-mobile.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_exclamation-bg-mobile.webp");
+      }
     }
   }
 
@@ -134,7 +197,15 @@
         padding-top: 25px;
         padding-left: 13px;
         font-size: $fontSizeExclamationLarge;
-        background-image: url("../img/benefits_exclamation-bg-desktop.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/benefits_exclamation-bg-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/benefits_exclamation-bg-desktop.webp");
+        }
       }
     }
 

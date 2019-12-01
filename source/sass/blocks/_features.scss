@@ -181,7 +181,14 @@
     padding-top: 253px;
 
     &::before {
-      background-image: url("../img/features_knowledge-mobile.jpg");
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/features_knowledge-mobile.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/features_knowledge-mobile.webp");
+      }
     }
   }
 
@@ -190,7 +197,14 @@
     padding-top: 261px;
 
     &::before {
-      background-image: url("../img/features_skills-mobile.jpg");
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/features_skills-mobile.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/features_skills-mobile.webp");
+      }
     }
   }
 
@@ -200,7 +214,15 @@
 
     &::before {
       left: -6px;
-      background-image: url("../img/features_extreme-mobile.jpg");
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/features_extreme-mobile.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/features_extreme-mobile.webp");
+      }
     }
   }
 
@@ -208,7 +230,14 @@
     padding-top: 258px;
 
     &::before {
-      background-image: url("../img/features_stress-mobile.jpg");
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/features_stress-mobile.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/features_stress-mobile.webp");
+      }
     }
   }
 
@@ -229,7 +258,15 @@
       &::before {
         left: 11px;
         width: 290px;
-        background-image: url("../img/features_knowledge-tablet.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_knowledge-tablet.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_knowledge-tablet.webp");
+        }
       }
     }
 
@@ -241,7 +278,15 @@
 
       &::before {
         width: 291px;
-        background-image: url("../img/features_skills-tablet.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_skills-tablet.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_skills-tablet.webp");
+        }
       }
     }
 
@@ -254,7 +299,15 @@
       &::before {
         left: -7px;
         width: 320px;
-        background-image: url("../img/features_extreme-tablet.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_extreme-tablet.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_extreme-tablet.webp");
+        }
       }
     }
 
@@ -265,7 +318,14 @@
       padding-left: 52px;
 
       &::before {
-        background-image: url("../img/features_stress-tablet.png");
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_stress-tablet.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_stress-tablet.webp");
+        }
       }
     }
 
@@ -300,7 +360,15 @@
       &::before {
         left: 25px;
         width: 366px;
-        background-image: url("../img/features_knowledge-desktop.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_knowledge-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_knowledge-desktop.webp");
+        }
       }
     }
 
@@ -313,7 +381,15 @@
 
       &::before {
         width: 373px;
-        background-image: url("../img/features_skills-desktop.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_skills-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_skills-desktop.webp");
+        }
       }
     }
 
@@ -326,7 +402,15 @@
       &::before {
         left: -35px;
         width: 374px;
-        background-image: url("../img/features_extreme-desktop.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_extreme-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_extreme-desktop.webp");
+        }
       }
     }
 
@@ -338,7 +422,15 @@
 
       &::before {
         width: 393px;
-        background-image: url("../img/features_stress-desktop.png");
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/features_stress-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/features_stress-desktop.webp");
+        }
       }
     }
   }
