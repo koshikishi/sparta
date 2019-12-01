@@ -32,18 +32,14 @@
   @extend %title;
   margin-bottom: 67px;
 
-  @media (max-width: 1169px) {
+  @media (max-width: 749px) {
     &::before {
       top: 14px;
     }
+  }
 
-    @media (min-width: 750px) {
-      margin-bottom: 85px;
-
-      &::before {
-        top: -32px;
-      }
-    }
+  @media (min-width: 750px) {
+    margin-bottom: 85px;
   }
 
   @media (min-width: 1170px) {

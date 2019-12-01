@@ -16,12 +16,6 @@
 
   @media (min-width: 750px) {
     margin-bottom: 63px;
-
-    @media (max-width: 1169px) {
-      &::before {
-        top: -32px;
-      }
-    }
   }
 
   @media (min-width: 1170px) {
