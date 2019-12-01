@@ -389,7 +389,7 @@
             </div>
           </div>
         </section>
-        <section class="map page__map">
+        <section class="map">
           <h2 class="map__title" data-bg="Мы здесь были">
             <span>География проведения</span>
           </h2>
@@ -417,7 +417,9 @@
           <div class="contacts__content">
             <h2 class="contacts__title">Есть вопросы?</h2>
             <p class="contacts__text">Оставьте свой номер телефона, наши менеджеры с&nbsp;вами свяжутся и проконсультируют</p>
-            <form class="contacts-form contacts__contacts-form" action="#" method="post">
+          </div>
+          <form class="contacts-form" action="#" method="post">
+            <div class="contacts-form__inner">
               <div class="contacts-form__field">
                 <label class="visually-hidden" for="name">Имя</label>
                 <input id="name" type="text" name="name" placeholder="Имя" required>
@@ -426,9 +428,9 @@
                 <label class="visually-hidden" for="phone">Телефон</label>
                 <input id="phone" type="tel" name="phone" placeholder="Телефон" required>
               </div>
-              <button class="button" type="submit">Отправить</button>
-            </form>
-          </div>
+            </div>
+            <button class="button button--wide contacts-form__button" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
     </main>
@@ -450,15 +452,17 @@
       <h2 class="modal__title">Попробуй выжить</h2>
       <p class="modal__text">Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки</p>
       <form class="contacts-form modal__contacts-form" action="#" method="post">
-        <div class="contacts-form__field">
-          <label class="visually-hidden" for="name_modal">Имя</label>
-          <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+        <div class="contacts-form__inner">
+          <div class="contacts-form__field">
+            <label class="visually-hidden" for="name_modal">Имя</label>
+            <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+          </div>
+          <div class="contacts-form__field">
+            <label class="visually-hidden" for="phone_modal">Телефон</label>
+            <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
+          </div>
         </div>
-        <div class="contacts-form__field">
-          <label class="visually-hidden" for="phone_modal">Телефон</label>
-          <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
-        </div>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button contacts-form__button" type="submit">Отправить</button>
       </form>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>

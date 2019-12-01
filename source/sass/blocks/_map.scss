@@ -21,10 +21,6 @@
       background-image: url("../img/map_border-tablet.png");
     }
 
-    @media (min-width: 765px) and (max-width: 1169px) {
-      background-size: 100% 100%;
-    }
-
     @media (min-width: 1170px) {
       height: 660px;
       background-image: url("../img/map_border-desktop.png");
@@ -68,6 +64,12 @@
 
   @media (min-width: 750px) {
     height: 605px;
+
+    @media (max-width: 1169px) {
+      max-width: 765px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   @media (min-width: 1170px) {

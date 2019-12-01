@@ -15,15 +15,17 @@
       <h2 class="modal__title">Попробуй выжить</h2>
       <p class="modal__text">Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки</p>
       <form class="contacts-form modal__contacts-form" action="#" method="post">
-        <div class="contacts-form__field">
-          <label class="visually-hidden" for="name_modal">Имя</label>
-          <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+        <div class="contacts-form__inner">
+          <div class="contacts-form__field">
+            <label class="visually-hidden" for="name_modal">Имя</label>
+            <input id="name_modal" type="text" name="name" placeholder="Имя" required>
+          </div>
+          <div class="contacts-form__field">
+            <label class="visually-hidden" for="phone_modal">Телефон</label>
+            <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
+          </div>
         </div>
-        <div class="contacts-form__field">
-          <label class="visually-hidden" for="phone_modal">Телефон</label>
-          <input id="phone_modal" type="tel" name="phone" placeholder="Телефон" required>
-        </div>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button contacts-form__button" type="submit">Отправить</button>
       </form>
     </section>
   </body>

@@ -1,0 +1,85 @@
+.contacts-form__inner {
+  margin-bottom: 46px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 54px;
+    padding-right: 4px;
+    padding-left: 9px;
+  }
+
+  @media (min-width: 1170px) {
+    padding-right: 5px;
+    padding-left: 8px;
+  }
+}
+
+.contacts-form__field {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 24px 12px;
+    font: inherit;
+    color: $colorWhite;
+    background-color: rgba($colorWhite, 0.1);
+    border: 1px solid transparent;
+    border-radius: 24px;
+
+    &:hover {
+      background-color: rgba($colorWhite, 0.2);
+    }
+
+    &:focus {
+      border-color: rgba($colorWhite, 0.2);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+
+  &--required {
+    position: relative;
+
+    &::after {
+      content: "Заполните поле";
+      position: absolute;
+      top: 11px;
+      right: 26px;
+      color: $colorWhite;
+      pointer-events: none;
+    }
+
+    input {
+      background-color: rgba($colorPrimary, 0.3);
+      border-color: rgba($colorPrimary, 0.3);
+
+      &:hover {
+        background-color: rgba($colorPrimary, 0.4);
+      }
+    }
+  }
+
+  @media (min-width: 750px) {
+    margin-bottom: 22px;
+  }
+}
+
+.contacts-form__button {
+  display: block;
+  margin-left: 11px;
+
+  @media (min-width: 750px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
