@@ -192,6 +192,8 @@
   overflow: hidden;
 
   .no-js & {
+    height: 192px;
+    margin-bottom: 0;
     overflow: auto;
   }
 
@@ -240,6 +242,10 @@
 
   &:active {
     transform: translateY(1px);
+  }
+
+  .no-js & {
+    display: none;
   }
 }
 
