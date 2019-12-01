@@ -4,6 +4,10 @@
   line-height: $lineHeightNormal;
   color: $colorWhite;
 
+  &--footer {
+    color: $colorTextFooter;
+  }
+
   &:hover,
   &:focus {
     color: $colorPrimary;

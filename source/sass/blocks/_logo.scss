@@ -11,4 +11,34 @@
       width: 247px;
     }
   }
+
+  &--footer {
+    position: relative;
+
+    img {
+      width: 156px;
+    }
+
+    span {
+      position: absolute;
+      font-weight: $fontWeightMedium;
+      font-size: $fontSizeTextTiny;
+      line-height: $lineHeightNormal;
+      color: $colorTextFooter;
+
+      @media (max-width: 1169px) {
+        bottom: -4px;
+        left: 68px;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      width: 240px;
+
+      span {
+        top: 19px;
+        right: 0;
+      }
+    }
+  }
 }

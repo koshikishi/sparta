@@ -157,3 +157,9 @@
     margin-bottom: 125px;
   }
 }
+
+.page__contacts {
+  @media (min-width: 1170px) {
+    margin-bottom: -13px;
+  }
+}
