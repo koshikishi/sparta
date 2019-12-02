@@ -67,6 +67,40 @@ for (var k = 0; k < contactForms.length; k++) {
   formInputCheck(contactForms[k]);
 }
 
+// Добавление скролла перетаскиванием мышью
+if (!document.querySelector('.page--inner')) {
+  var scrollViewport = {
+    knowledge: document.querySelector('.knowledge__extra-wrapper'),
+    gallery: document.querySelector('.gallery__inner'),
+    map: document.querySelector('.map__inner'),
+  };
+
+  if (window.matchMedia('(min-width: 750px) and (max-width: 1139px)').matches) {
+    addDragScroll(scrollViewport.knowledge);
+  }
+
+  if (window.matchMedia('(max-width: 1919px)').matches) {
+    addDragScroll(scrollViewport.gallery);
+    addDragScroll(scrollViewport.map);
+  }
+
+  window.addEventListener('resize', function () {
+    if (window.matchMedia('(min-width: 750px) and (max-width: 1139px)').matches) {
+      addDragScroll(scrollViewport.knowledge);
+    } else {
+      removeDragScroll(scrollViewport.knowledge);
+    }
+
+    if (window.matchMedia('(max-width: 1919px)').matches) {
+      addDragScroll(scrollViewport.gallery);
+      addDragScroll(scrollViewport.map);
+    } else {
+      removeDragScroll(scrollViewport.gallery);
+      removeDragScroll(scrollViewport.map);
+    }
+  });
+}
+
 // Появление всплывающего окна
 function modalOpen() {
   modal.classList.add('modal--shown');
@@ -112,4 +146,20 @@ function formInputCheck(form) {
       }
     }
   });
+}
+
+// Добавление скролла перетаскиванием мышью
+function addDragScroll(elmnt) {
+  if (!elmnt.classList.contains('dragscroll')) {
+    elmnt.classList.add('dragscroll');
+    dragscroll.reset();
+  }
+}
+
+// Удаление скролла перетаскиванием мышью
+function removeDragScroll(elmnt) {
+  if (elmnt.classList.contains('dragscroll')) {
+    elmnt.classList.remove('dragscroll');
+    dragscroll.reset();
+  }
 }

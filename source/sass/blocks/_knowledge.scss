@@ -329,13 +329,18 @@
 
   @media (min-width: 750px) and (max-width: 1169px) {
     max-width: 1140px;
-
-    .no-js & {
-      overflow: auto;
-    }
+    overflow: auto;
 
     .js & {
-      overflow: hidden;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+      }
     }
   }
 }
@@ -370,6 +375,16 @@
 
     .webp & {
       background-image: url("../img/knowledge_extra-desktop.webp");
+    }
+
+    @media (max-width: 1139px) {
+      .js & {
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
     }
   }
 }

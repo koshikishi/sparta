@@ -48,7 +48,10 @@ exports.html = html;
 // Минификация файлов скриптов *.js
 function js() {
   return pipeline(
-    src(`source/js/*.js`),
+    src([
+      `source/js/*.js`,
+      `node_modules/dragscroll/dragscroll.js`
+    ]),
     uglify(),
     rename({
       suffix: `.min`

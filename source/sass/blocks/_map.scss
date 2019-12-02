@@ -78,13 +78,18 @@
 
 .map__inner {
   height: 428px;
-
-  .no-js & {
-    overflow: auto;
-  }
+  overflow: auto;
 
   .js & {
-    overflow: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background-color: transparent;
+    }
   }
 
   @media (min-width: 750px) {
@@ -110,6 +115,16 @@
     display: block;
     width: 1920px;
     max-width: none;
+  }
+
+  @media (max-width: 1919px) {
+    .js & {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
   }
 }
 

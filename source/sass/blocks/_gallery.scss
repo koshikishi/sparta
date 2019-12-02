@@ -3,12 +3,18 @@
 }
 
 .gallery__inner {
-  .no-js & {
-    overflow: auto;
-  }
+  overflow: auto;
 
   .js & {
-    overflow: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background-color: transparent;
+    }
   }
 }
 
@@ -24,6 +30,16 @@
 
     @media (min-width: 1170px) {
       width: 1920px;
+    }
+  }
+
+  @media (max-width: 1919px) {
+    .js & {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
     }
   }
 }
