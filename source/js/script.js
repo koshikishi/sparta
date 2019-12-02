@@ -43,6 +43,30 @@ if (!document.querySelector('.page--inner')) {
   });
 }
 
+// Оживление полей ввода формы
+var inputs = document.querySelectorAll('.contacts-form__field input');
+
+var addInputBlurHandler = function (input) {
+  input.addEventListener('blur', function () {
+    if (input.value === '') {
+      inputRequiredOn(input);
+    } else if (input.parentElement.classList.contains('contacts-form__field--required')) {
+      inputRequiredOff(input);
+    }
+  });
+};
+
+for (var j = 0; j < inputs.length; j++) {
+  addInputBlurHandler(inputs[j]);
+}
+
+// Проверка полей ввода формы на заполнение перед отправкой
+var contactForms = document.querySelectorAll('.contacts-form');
+
+for (var k = 0; k < contactForms.length; k++) {
+  formInputCheck(contactForms[k]);
+}
+
 // Появление всплывающего окна
 function modalOpen() {
   modal.classList.add('modal--shown');
@@ -52,6 +76,40 @@ function modalOpen() {
 
 // Закрытие всплывающего окна
 function modalClose() {
+  var modalInputs = modal.querySelectorAll('.contacts-form__field input');
+
   modal.classList.remove('modal--shown');
   overlay.classList.remove('overlay--shown');
+
+  for (var l = 0; l < modalInputs.length; l++) {
+    if (modalInputs[l].parentElement.classList.contains('contacts-form__field--required')) {
+      inputRequiredOff(modalInputs[l]);
+    }
+  }
+}
+
+// Вывод требования заполнить поле
+function inputRequiredOn(input) {
+  input.parentElement.classList.add('contacts-form__field--required');
+}
+
+// Скрытие требования заполнить поле
+function inputRequiredOff(input) {
+  input.parentElement.classList.remove('contacts-form__field--required');
+}
+
+// Проверка полей ввода на заполнение
+function formInputCheck(form) {
+  var formSubmit = form.querySelector('.contacts-form__button');
+  var formInputs = form.querySelectorAll('.contacts-form__field input');
+
+  formSubmit.addEventListener('click', function (evt) {
+    for (var m = formInputs.length - 1; m >= 0; m--) {
+      if (formInputs[m].value === '') {
+        evt.preventDefault();
+        inputRequiredOn(formInputs[m]);
+        formInputs[m].focus();
+      }
+    }
+  });
 }
