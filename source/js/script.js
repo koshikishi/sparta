@@ -101,6 +101,80 @@ if (!document.querySelector('.page--inner')) {
   });
 }
 
+// Запуск видео и отображение элементов управления по клику
+var video = document.querySelector('.testimonials__video video');
+
+if (video) {
+  video.controls = false;
+
+  video.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    video.play();
+    video.controls = true;
+  });
+}
+
+// Отображение полного отзыва
+if (!document.querySelector('.page--inner')) {
+  var testimonialLinks = document.querySelectorAll('.testimonials__item-link');
+
+  var addTestimonialLinksClickHandler = function (link) {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      link.parentElement.classList.add('no-js');
+    });
+  };
+
+  for (var n = 0; n < testimonialLinks.length; n++) {
+    addTestimonialLinksClickHandler(testimonialLinks[n]);
+  }
+}
+
+// Оживление слайдера отзывов
+if (!document.querySelector('.page--inner')) {
+  var testimonialSlider = new Flickity('.testimonials__list', {
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
+
+  // Добавление кастомных элементов управления
+  var testimonialDotsGroup = document.querySelector('.testimonials__dots');
+  var testimonialDots = window.fizzyUIUtils.makeArray(testimonialDotsGroup.children);
+
+  testimonialSlider.on('select', function () {
+    var previousSelectedDot = document.querySelector('.testimonials__dot--active');
+    var selectedDot = testimonialDotsGroup.children[testimonialSlider.selectedIndex];
+
+    previousSelectedDot.classList.remove('testimonials__dot--active');
+    selectedDot.classList.add('testimonials__dot--active');
+  });
+
+  testimonialDotsGroup.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (!matchesSelector(evt.target, '.testimonials__dot')) {
+      return;
+    }
+
+    var index = testimonialDots.indexOf(evt.target);
+    testimonialSlider.select(index);
+  });
+
+  // Добавление кастомных стрелок
+  var testimonialPrevButton = document.querySelector('.testimonials__arrow--prev');
+  var testimonialNextButton = document.querySelector('.testimonials__arrow--next');
+
+  testimonialPrevButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    testimonialSlider.previous();
+  });
+
+  testimonialNextButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    testimonialSlider.next();
+  });
+}
+
 // Появление всплывающего окна
 function modalOpen() {
   modal.classList.add('modal--shown');

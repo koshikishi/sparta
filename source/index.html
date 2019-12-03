@@ -11,6 +11,7 @@
     <link rel="preload" href="fonts/coresanse-95black.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="fonts/besom-regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/flickity.min.css">
   </head>
   <body class="page">
     <header class="header page__header">
@@ -284,8 +285,8 @@
             </div>
           </div>
           <div class="testimonials__slider">
-            <ul class="testimonials__list">
-              <li class="testimonials__item testimonials__item--active" id="testimonial_01">
+            <div class="testimonials__list">
+              <div class="testimonials__item" id="testimonial_01">
                 <picture class="testimonials__photo">
                   <source srcset="img/testimonials_photo-01-desktop.webp" media="(min-width: 1170px)" type="image/webp">
                   <source srcset="img/testimonials_photo-01-tablet.webp" media="(min-width: 750px)" type="image/webp">
@@ -304,8 +305,8 @@
                   </p>
                   <a class="testimonials__item-link" href="#!">Читать весь отзыв</a>
                 </div>
-              </li>
-              <li class="testimonials__item" id="testimonial_02">
+              </div>
+              <div class="testimonials__item" id="testimonial_02">
                 <picture class="testimonials__photo">
                   <source srcset="img/testimonials_photo-02-desktop.webp" media="(min-width: 1170px)" type="image/webp">
                   <source srcset="img/testimonials_photo-02-tablet.webp" media="(min-width: 750px)" type="image/webp">
@@ -324,8 +325,8 @@
                   </p>
                   <a class="testimonials__item-link" href="#!">Читать весь отзыв</a>
                 </div>
-              </li>
-              <li class="testimonials__item" id="testimonial_03">
+              </div>
+              <div class="testimonials__item" id="testimonial_03">
                 <picture class="testimonials__photo">
                   <source srcset="img/testimonials_photo-03-desktop.webp" media="(min-width: 1170px)" type="image/webp">
                   <source srcset="img/testimonials_photo-03-tablet.webp" media="(min-width: 750px)" type="image/webp">
@@ -344,8 +345,8 @@
                   </p>
                   <a class="testimonials__item-link" href="#!">Читать весь отзыв</a>
                 </div>
-              </li>
-              <li class="testimonials__item" id="testimonial_04">
+              </div>
+              <div class="testimonials__item" id="testimonial_04">
                 <picture class="testimonials__photo">
                   <source srcset="img/testimonials_photo-04-desktop.webp" media="(min-width: 1170px)" type="image/webp">
                   <source srcset="img/testimonials_photo-04-tablet.webp" media="(min-width: 750px)" type="image/webp">
@@ -364,8 +365,8 @@
                   </p>
                   <a class="testimonials__item-link" href="#!">Читать весь отзыв</a>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="testimonials__control">
               <a class="testimonials__arrow testimonials__arrow--prev" href="#!">
                 <span class="visually-hidden">Предыдущий отзыв</span>
@@ -474,6 +475,7 @@
       </button>
     </section>
     <script src="js/dragscroll.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
