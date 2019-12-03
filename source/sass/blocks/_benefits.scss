@@ -1,0 +1,348 @@
+.benefits {
+  @extend %container-wrapper;
+  background: top / 750px 100% no-repeat $colorBackground;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/benefits_bg-mobile.jpg");
+  }
+
+  .webp & {
+    background-image: url("../img/benefits_bg-mobile.webp");
+  }
+
+  @media (min-width: 750px) {
+    background-size: 1170px 100%;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_bg-tablet.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1170px) {
+    background-size: 1920px 100%;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_bg-desktop.webp");
+    }
+  }
+}
+
+.benefits__inner {
+  @extend %container-inner;
+  padding: 129px 14px 153px;
+
+  @media (min-width: 750px) {
+    padding: 170px 12px 147px 15px;
+  }
+
+  @media (min-width: 1170px) {
+    padding: 196px 14px 150px 13px;
+  }
+}
+
+.benefits__box {
+  margin-bottom: 37px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 749px) {
+    padding-left: 3px;
+  }
+
+  &--highlighted {
+    padding: 63px 19px 45px;
+    background: center -2px no-repeat;
+    border: solid $colorPrimary;
+    border-width: 7px 5px 8px;
+    border-image: 7 5 8 / auto repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/benefits_list-bg-mobile.png");
+      border-image-source: url("../img/benefits_list-border-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/benefits_list-bg-mobile.webp");
+      border-image-source: url("../img/benefits_list-border-mobile.webp");
+    }
+  }
+
+  @media (min-width: 750px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 38px;
+
+    &--highlighted {
+      padding: 35px 25px 42px 26px;
+      background-position: -6px -5px;
+      border-width: 6px 8px 6px 7px;
+      border-image-slice: 6 8 6 7;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_list-bg-tablet.png");
+        border-image-source: url("../img/benefits_list-border-tablet.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_list-bg-tablet.webp");
+        border-image-source: url("../img/benefits_list-border-tablet.webp");
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 71px;
+
+    &--highlighted {
+      padding: 42px 34px 36px 64px;
+      background-position: -9px -8px;
+      border-width: 9px 10px 9px 11px;
+      border-image-slice: 9 10 9 11;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_list-bg-desktop.png");
+        border-image-source: url("../img/benefits_list-border-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_list-bg-desktop.webp");
+        border-image-source: url("../img/benefits_list-border-desktop.webp");
+      }
+    }
+  }
+}
+
+.benefits__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: $fontWeightBlack;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightNormal;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  &--exclamation {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 16px;
+
+    &::after {
+      content: "!";
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+      width: 106px;
+      height: 116px;
+      padding-top: 20px;
+      padding-left: 12px;
+      font: $fontWeightNormal #{$fontSizeExclamationSmall}/#{$lineHeightNormal} $fontFamilyTitle;
+      text-align: center;
+      background: center no-repeat;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/benefits_exclamation-bg-mobile.png");
+      }
+
+      .webp & {
+        background-image: url("../img/benefits_exclamation-bg-mobile.webp");
+      }
+    }
+  }
+
+  @media (max-width: 749px) {
+    &--exclamation {
+      padding-right: 102px;
+
+      &::after {
+        right: -4px;
+      }
+    }
+
+    .benefits__box--highlighted & {
+      margin-bottom: 93px;
+      padding-left: 20px;
+    }
+  }
+
+  @media (min-width: 750px) {
+    &--exclamation {
+      width: 180px;
+      padding-top: 27px;
+      padding-bottom: 30px;
+      padding-left: 154px;
+
+      &::after {
+        left: -16px;
+        width: 130px;
+        height: 143px;
+        padding-top: 25px;
+        padding-left: 13px;
+        font-size: $fontSizeExclamationLarge;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/benefits_exclamation-bg-desktop.png");
+        }
+
+        .webp & {
+          background-image: url("../img/benefits_exclamation-bg-desktop.webp");
+        }
+      }
+    }
+
+    .benefits__box--highlighted & {
+      width: 220px;
+      margin-top: 72px;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    &--exclamation {
+      padding-left: 159px;
+
+      &::after {
+        left: -11px;
+      }
+    }
+
+    .benefits__box--highlighted & {
+      width: 300px;
+      margin-top: 66px;
+    }
+  }
+}
+
+.benefits__list {
+  @extend %list-reset;
+
+  .benefits__box--highlighted & {
+    counter-reset: number;
+  }
+
+  @media (min-width: 750px) {
+    width: 300px;
+    padding-top: 30px;
+
+    .benefits__box--highlighted & {
+      width: 380px;
+      padding-top: 0;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 697px;
+    padding-right: 18px;
+
+    .benefits__box--highlighted & {
+      width: 613px;
+      padding-right: 0;
+    }
+  }
+}
+
+.benefits__item {
+  margin-bottom: 37px;
+
+  .benefits__box--highlighted & {
+    position: relative;
+    margin-bottom: 26px;
+    padding-top: 17px;
+    counter-increment: number;
+
+    &::before {
+      content: counter(number, decimal-leading-zero);
+      position: absolute;
+      top: 0;
+      left: 0;
+      font: #{$fontSizeNumberTiny}/#{$lineHeightNormal} $fontFamilyTitle;
+      color: $colorWhite;
+      text-transform: uppercase;
+      letter-spacing: $letterSpacing;
+      opacity: 0.15;
+    }
+
+    @media (min-width: 750px) {
+      margin-bottom: 28px;
+    }
+  }
+
+  @media (max-width: 1169px) {
+    &:last-child {
+      margin-bottom: 0;
+
+      .benefits__box--highlighted & {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    &:nth-child(odd) {
+      width: 360px;
+    }
+
+    &:nth-child(even) {
+      width: 260px;
+    }
+
+    .benefits__box--highlighted & {
+      margin-bottom: 30px;
+      padding-top: 82px;
+
+      &:nth-child(odd) {
+        width: 220px;
+      }
+
+      &:nth-child(even) {
+        width: 310px;
+      }
+
+      &::before {
+        left: -5px;
+        font-size: $fontSizeNumberSmall;
+      }
+    }
+  }
+}
+
+.benefits__item-title {
+  @extend %subtitle;
+  margin-bottom: 14px;
+  color: $colorWhite;
+  text-transform: uppercase;
+
+  .benefits__box--highlighted & {
+    @media (max-width: 1169px) {
+      margin-bottom: 12px;
+      padding-left: 54px;
+    }
+  }
+}
+
+.benefits__item-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $colorWhite;
+}

@@ -1,0 +1,144 @@
+.modal {
+  position: fixed;
+  top: -35px;
+  left: 0;
+  z-index: 1;
+  display: none;
+  box-sizing: border-box;
+  height: 675px;
+  background: 0 12px no-repeat;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/modal_bg.png");
+  }
+
+  .webp & {
+    background-image: url("../img/modal_bg.webp");
+  }
+
+  &--shown {
+    display: block;
+  }
+
+  .page--inner & {
+    position: static;
+  }
+
+  @media (max-width: 749px) {
+    right: 0;
+    background-position: center 12px;
+
+    .page--inner & {
+      margin-top: -35px;
+    }
+  }
+
+  @media (min-width: 750px) {
+    top: 16px;
+    left: 50%;
+    width: 612px;
+    transform: translateX(-50%) translateX(16px);
+
+    .page--inner & {
+      margin-right: auto;
+      margin-left: auto;
+      transform: none;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    top: 50%;
+    transform: translate(-50%, -50%) translate(16px, 30px);
+  }
+}
+
+.modal__inner {
+  @extend %container-inner;
+  padding-top: 85px;
+
+  @media (min-width: 750px) {
+    max-width: 380px;
+    padding-top: 95px;
+  }
+}
+
+.modal__content {
+  margin-bottom: 40px;
+
+  @media (max-width: 749px) {
+    padding-right: 20px;
+    padding-left: 11px;
+  }
+
+  @media (min-width: 750px) {
+    margin-bottom: 44px;
+  }
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font: #{$fontSizeTitleHeroMobile}/#{$lineHeightNormal} $fontFamilyTitle;
+  text-align: center;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  @media (min-width: 750px) {
+    font-size: $fontSizeTitleModal;
+  }
+}
+
+.modal__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 4px;
+  color: $colorWhite;
+
+  @media (min-width: 750px) {
+    padding-left: 9px;
+  }
+
+  @media (min-width: 1170px) {
+    padding-left: 8px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 50px;
+  right: 16px;
+  width: 21px;
+  height: 23px;
+  padding: 0;
+  background: 0 0 no-repeat;
+  border: none;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/modal_close.png");
+  }
+
+  .webp & {
+    background-image: url("../img/modal_close.webp");
+  }
+
+  &:hover,
+  &:focus {
+    background-position-y: -23px;
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @media (min-width: 500px) and (max-width: 749px) {
+    right: calc(50% - 234px);
+  }
+
+  @media (min-width: 750px) {
+    top: 0;
+  }
+}

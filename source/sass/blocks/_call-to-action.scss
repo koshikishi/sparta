@@ -1,0 +1,116 @@
+.call-to-action {
+  @extend %container-wrapper;
+  background: top / 750px 100% no-repeat $colorBackground;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/call-to-action_bg-mobile.jpg");
+  }
+
+  .webp & {
+    background-image: url("../img/call-to-action_bg-mobile.webp");
+  }
+
+  @media (min-width: 750px) {
+    background-color: transparent;
+    background-size: 1920px 100%;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/call-to-action_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/call-to-action_bg-desktop.webp");
+    }
+
+    @media (max-width: 1169px) {
+      background-position: calc(50% + 123px) 0;
+    }
+  }
+}
+
+.call-to-action__inner {
+  @extend %container-inner;
+  padding-top: 132px;
+  padding-bottom: 141px;
+
+  @media (min-width: 750px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 14px 120px 16px;
+  }
+
+  @media (min-width: 1170px) {
+    padding-top: 127px;
+    padding-right: 17px;
+    padding-bottom: 98px;
+  }
+}
+
+.call-to-action__slogan {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightBlack;
+  font-size: $fontSizeCallToActionMobile;
+  line-height: $lineHeightNormal;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  span {
+    display: block;
+    font: $fontWeightNormal #{$fontSizeCallToActionFirstMobile}/#{$lineHeightNormal} $fontFamilyTitle;
+    color: $colorPrimary;
+  }
+
+  @media (max-width: 749px) {
+    margin-bottom: 50px;
+    padding-right: 6px;
+    padding-left: 15px;
+
+    span {
+      margin-bottom: -14px;
+    }
+  }
+
+  @media (min-width: 750px) {
+    font-size: $fontSizeCallToActionTablet;
+
+    span {
+      font-size: $fontSizeCallToActionFirstTablet;
+
+      @media (max-width: 1169px) {
+        margin-bottom: -15px;
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    display: flex;
+    width: 770px;
+    font-size: $fontSizeCallToActionDesktop;
+
+    span {
+      margin-right: 54px;
+      font-size: $fontSizeCallToActionFirstDesktop;
+      transform: translateY(-9px);
+    }
+  }
+}
+
+.call-to-action__button {
+  @media (max-width: 749px) {
+    display: block;
+    margin-left: 11px;
+  }
+
+  @media (min-width: 750px) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: 1170px) {
+    margin-top: 11px;
+  }
+}

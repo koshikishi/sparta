@@ -1,0 +1,11 @@
+// Подключаем шрифт Core Sans E
+@include font-face("Core Sans E", "35 Light", $fontWeightLight);
+@include font-face("Core Sans E", "35 Light", $fontWeightLight, italic);
+@include font-face("Core Sans E", "45 Regular");
+@include font-face("Core Sans E", "55 Medium", $fontWeightMedium);
+@include font-face("Core Sans E", "65 Bold", $fontWeightBold);
+@include font-face("Core Sans E", "85 Heavy", $fontWeightHeavy);
+@include font-face("Core Sans E", "95 Black", $fontWeightBlack);
+
+// Подключаем шрифт Besom
+@include font-face-besom;

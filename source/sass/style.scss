@@ -8,7 +8,52 @@
 @import "misc/fonts";
 
 // Подключаем шаблонные и вспомогательные классы
-@import "misc/extends", "blocks/visually-hidden";
+@import "misc/extends", "blocks/visually-hidden", "blocks/overlay";
 
 // Подключаем основные стили
-@import "misc/base";
+@import "misc/base", "blocks/page", "blocks/button";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/logo", "blocks/phone";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";
+
+// Подключаем стили блока преимуществ
+@import "blocks/features";
+
+// Подключаем стили блока о курсе
+@import "blocks/benefits";
+
+// Подключаем стили блока содержания курса
+@import "blocks/knowledge";
+
+// Подключаем стили блока призыва к действию
+@import "blocks/call-to-action";
+
+// Подключаем стили блока навыков
+@import "blocks/skills";
+
+// Подключаем стили блока программы курса
+@import "blocks/program";
+
+// Подключаем стили блока галереи
+@import "blocks/gallery";
+
+// Подключаем стили блока об инструкторе
+@import "blocks/instructor";
+
+// Подключаем стили блока отзывов
+@import "blocks/testimonials";
+
+// Подключаем стили блока карты
+@import "blocks/map";
+
+// Подключаем стили блока формы обратного звонка
+@import "blocks/contacts", "blocks/contacts-form";
+
+// Подключаем стили подвала
+@import "blocks/footer";
+
+// Подключаем стили всплывающего окна
+@import "blocks/modal";

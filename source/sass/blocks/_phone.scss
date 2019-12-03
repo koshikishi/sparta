@@ -1,0 +1,26 @@
+.phone {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightNormal;
+  color: $colorWhite;
+
+  &--footer {
+    color: $colorTextFooter;
+  }
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary;
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @media (min-width: 1170px) {
+    &--header {
+      font-size: $fontSizeTextHuge;
+    }
+  }
+}

@@ -35,6 +35,25 @@ function css() {
 }
 exports.css = css;
 
+// Минификация файлов *.css
+function cssmin() {
+  return src(`node_modules/flickity/dist/flickity.css`)
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({
+      level: {
+        1: {
+          specialComments: false
+        }
+      }
+    }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(sourcemaps.write(`.`))
+    .pipe(dest(`build/css`))
+}
+exports.cssmin = cssmin;
+
 // Минификация файлов *.html
 function html() {
   return src(`source/*.html`)
@@ -48,7 +67,11 @@ exports.html = html;
 // Минификация файлов скриптов *.js
 function js() {
   return pipeline(
-    src(`source/js/*.js`),
+    src([
+      `source/js/*.js`,
+      `node_modules/dragscroll/dragscroll.js`,
+      `node_modules/flickity/dist/flickity.pkgd.js`
+    ]),
     uglify(),
     rename({
       suffix: `.min`
@@ -101,8 +124,9 @@ exports.img = img;
 exports.webp = function () {
   return src(`source/img/*.{png,jpg}`)
     .pipe(webp({
-      quality: 80,
-      method: 6
+      quality: 75,
+      alphaQuality: 75,
+      method: 5
     }))
     .pipe(dest(`build/img`));
 };
@@ -119,6 +143,7 @@ function copy() {
     `source/fonts/**/*.{woff,woff2,otf}`,
     `source/img/**`,
     `!source/img/icon-*.svg`,
+    `source/video/**`,
     `source/*.ico`
   ], {
     base: `source`
@@ -152,12 +177,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, modzr, html)
+  parallel(copy, css, cssmin, js, modzr, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, modzr, html),
+  parallel(copy, css, cssmin, js, modzr, html),
   server
 );

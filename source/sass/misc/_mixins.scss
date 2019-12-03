@@ -1,0 +1,38 @@
+// Выводит правило font-face для подключения шрифта с указанными параметрами
+@mixin font-face($family, $weightName, $weight: $fontWeightNormal, $style: normal) {
+  $fontName: $family;
+  $fontNameSecond: spaceless($family);
+
+  @if $style == normal {
+    $fontName: $fontName + " " + $weightName;
+    $fontNameSecond: $fontNameSecond + "-" + spaceless($weightName);
+  } @else {
+    $fontName: $fontName + " " + $weightName + " " + capitalize($style);
+    $fontNameSecond: $fontNameSecond + "-" + spaceless($weightName) + str-slice(capitalize($style), 1, 2);
+  }
+
+  @font-face {
+    font-style: $style;
+    font-weight: $weight;
+    font-family: $family;
+    font-display: swap;
+    src: local($fontName),
+         local($fontNameSecond),
+         url("../fonts/#{to-lower-case($fontNameSecond)}.otf") format("opentype");
+  }
+}
+
+// Выводит правило font-face для подключения шрифта Besom
+@mixin font-face-besom {
+  $fontName: "Besom";
+
+  @font-face {
+    font-style: normal;
+    font-weight: $fontWeightNormal;
+    font-family: $fontName;
+    font-display: swap;
+    src: local($fontName + " by Krisjanis Mezulis / RIT CREATIVE"),
+         local($fontName + " 2"),
+         url("../fonts/#{to-lower-case($fontName)}-regular.woff") format("woff");
+  }
+}

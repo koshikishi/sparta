@@ -1,0 +1,221 @@
+.hero {
+  @extend %container-wrapper;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 626px;
+    background: center no-repeat $colorBackgroundHero;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/hero_bg-mobile.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/hero_bg-mobile.webp");
+    }
+
+    @media (min-width: 750px) {
+      height: 602px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/hero_bg-tablet.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/hero_bg-tablet.webp");
+      }
+
+      @media (max-width: 907px) {
+        background-position: calc(50% + 123px) 0;
+      }
+    }
+
+    @media (max-width: 1169px) {
+      @media (min-width: 908px) {
+        background-position: left;
+      }
+
+      @media (min-width: 1152px) {
+        right: auto;
+        left: 50%;
+        width: 100%;
+        max-width: 1152px;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (min-width: 1170px) {
+      height: 1006px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/hero_bg-desktop.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/hero_bg-desktop.webp");
+      }
+    }
+
+    @media (min-width: 1920px) {
+      right: auto;
+      left: 50%;
+      width: 100%;
+      max-width: 1920px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.hero__inner {
+  @extend %container-inner;
+  position: relative;
+  min-height: 483px;
+
+  @media (min-width: 750px) {
+    min-height: 502px;
+  }
+
+  @media (min-width: 1170px) {
+    min-height: 789px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+.hero__content {
+  width: 320px;
+
+  @media (max-width: 1169px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1170px) {
+    width: 570px;
+  }
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 33px;
+  font-weight: $fontWeightBlack;
+  font-size: $fontSizeTitleHeroMobile;
+  line-height: $lineHeightNormal;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  span {
+    display: block;
+    margin-bottom: -21px;
+    font: $fontWeightNormal #{$fontSizeTitleHeroFirstMobile}/#{$lineHeightNormal} $fontFamilyTitle;
+    color: $colorPrimary;
+  }
+
+  @media (min-width: 750px) {
+    margin-bottom: 29px;
+    font-size: $fontSizeTitleHeroTablet;
+
+    span {
+      margin-bottom: -23px;
+      font-size: $fontSizeTitleHeroFirstTablet;
+    }
+  }
+
+  @media (max-width: 1169px) {
+    text-align: center;
+
+    span {
+      text-shadow: 0 4px 7.92px rgba($colorBlack, 0.34);
+    }
+  }
+
+  @media (min-width: 1170px) {
+    margin-bottom: 37px;
+    padding-left: 11px;
+    font-size: $fontSizeTitleDesktop;
+
+    span {
+      margin-bottom: -39px;
+      font-size: $fontSizeTitleShadowDesktop;
+    }
+  }
+}
+
+.hero__timetable {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 49px;
+
+  @media (max-width: 749px) {
+    padding-left: 13px;
+  }
+
+  @media (min-width: 750px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1170px) {
+    width: 319px;
+    margin-bottom: 65px;
+    padding-left: 14px;
+  }
+}
+
+.hero__timetable-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 205px;
+  height: 40px;
+  margin-top: 0;
+  margin-right: 13px;
+  margin-bottom: 0;
+  font-weight: $fontWeightBlack;
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightNormal;
+  color: $colorTextDays;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  background: center no-repeat;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/hero_timetable.png");
+  }
+
+  .webp & {
+    background-image: url("../img/hero_timetable.webp");
+  }
+
+  span {
+    margin-right: 10px;
+    margin-left: 12px;
+  }
+}
+
+.hero__timetable-text {
+  width: 80px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeTextTiny;
+  line-height: $lineHeightNormal;
+  color: $colorWhite;
+}
+
+.hero__button {
+  @media (max-width: 1169px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
