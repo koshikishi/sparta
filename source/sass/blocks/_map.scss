@@ -119,6 +119,7 @@
 
   @media (max-width: 1919px) {
     .js & {
+      cursor: move;
       cursor: grab;
 
       &:active {
