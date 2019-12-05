@@ -18,8 +18,9 @@
     margin-bottom: 95px;
 
     @media (max-width: 1169px) {
+      padding-top: 38px;
+
       &::before {
-        top: -38px;
         font-size: $fontSizeTitleShadowMedium;
       }
     }

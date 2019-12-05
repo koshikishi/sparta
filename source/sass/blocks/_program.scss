@@ -32,9 +32,7 @@
     margin-bottom: 60px;
 
     @media (max-width: 1169px) {
-      &::before {
-        top: -34px;
-      }
+      padding-top: 34px;
     }
   }
 

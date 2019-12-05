@@ -105,10 +105,13 @@ if (!document.querySelector('.page--inner')) {
 var video = document.querySelector('.testimonials__video video');
 
 if (video) {
+  var videoPlay = document.querySelector('.testimonials__video-play');
+  videoPlay.style.display = 'block';
   video.controls = false;
 
-  video.addEventListener('click', function (evt) {
+  videoPlay.addEventListener('click', function (evt) {
     evt.preventDefault();
+    videoPlay.removeAttribute('style');
     video.play();
     video.controls = true;
   });
