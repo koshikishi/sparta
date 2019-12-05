@@ -1,17 +1,14 @@
 .skills {
   @extend %container-wrapper;
   min-height: 910px;
+  overflow: hidden;
   background: url("../img/skills_bg-line-mobile.svg") calc(50% - 219px) 94px no-repeat;
 
-  @media (max-width: 749px) {
-    overflow: hidden;
-  }
-
   @media (min-width: 750px) {
-    min-height: 865px;
+    min-height: 897px;
     background-position:
-      calc(50% - 143px) 84px,
-      calc(50% - 263px) 249px;
+      calc(50% - 143px) 116px,
+      calc(50% - 263px) 281px;
 
     .no-js &,
     .no-webp & {
@@ -28,10 +25,10 @@
   }
 
   @media (min-width: 1170px) {
-    min-height: 933px;
+    min-height: 987px;
     background-position:
-      calc(50% + 20px) 120px,
-      calc(50% - 439px) 60px;
+      calc(50% + 20px) 174px,
+      calc(50% - 439px) 114px;
 
     .no-js &,
     .no-webp & {

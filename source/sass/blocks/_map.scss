@@ -2,7 +2,7 @@
   @extend %container-wrapper;
   position: relative;
 
-  @media (max-width: 749px) {
+  @media (max-width: 1169px) {
     overflow: hidden;
   }
 
@@ -65,9 +65,7 @@
     margin-bottom: 63px;
 
     @media (max-width: 1169px) {
-      &::before {
-        top: -29px;
-      }
+      padding-top: 29px;
     }
   }
 
