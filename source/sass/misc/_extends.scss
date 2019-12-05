@@ -46,11 +46,11 @@
     content: attr(data-bg);
     position: absolute;
     top: 0;
-    left: 50%;
+    right: 50%;
     font: $fontWeightNormal #{$fontSizeTitleShadowMobile}/#{$lineHeightNormal} $fontFamilyTitle;
     color: rgba($colorTitleShadow, 0.1);
     white-space: nowrap;
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
 
   span {
@@ -64,19 +64,19 @@
   }
 
   @media (min-width: 750px) {
+    padding-top: 32px;
     font-size: $fontSizeTitleTablet;
 
     &::before {
-      top: -32px;
       font-size: $fontSizeTitleShadowTablet;
     }
   }
 
   @media (min-width: 1170px) {
+    padding-top: 54px;
     font-size: $fontSizeTitleDesktop;
 
     &::before {
-      top: -54px;
       font-size: $fontSizeTitleShadowDesktop;
     }
   }

@@ -35,11 +35,11 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: 50%;
+    right: 50%;
     width: 351px;
     height: 14px;
     background-repeat: no-repeat;
-    transform: translateX(-50%);
+    transform: translateX(50%);
 
     .no-js &,
     .no-webp & {

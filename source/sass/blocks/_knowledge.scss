@@ -18,9 +18,7 @@
     margin-bottom: 47px;
 
     @media (max-width: 1169px) {
-      &::before {
-        top: -37px;
-      }
+      padding-top: 37px;
     }
   }
 

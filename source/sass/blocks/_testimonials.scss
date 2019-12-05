@@ -18,9 +18,7 @@
     margin-bottom: 60px;
 
     @media (max-width: 1169px) {
-      &::before {
-        top: -29px;
-      }
+      padding-top: 29px;
     }
   }
 
@@ -43,75 +41,61 @@
 }
 
 .testimonials__video {
+  position: relative;
+
   video {
     display: block;
     width: 292px;
     height: 164px;
     margin-right: auto;
     margin-left: auto;
-    background-repeat: no-repeat;
-    background-position:
-      center calc(50% + 8px),
-      center;
-
-    .no-js &,
-    .no-webp & {
-      background-image:
-        url("../img/testimonials_video-play.png"),
-        url("../img/testimonials_video-poster-mobile.jpg");
-    }
-
-    .webp & {
-      background-image:
-        url("../img/testimonials_video-play.webp"),
-        url("../img/testimonials_video-poster-mobile.webp");
-    }
-
-    &:hover,
-    &:focus {
-      background-size:
-        125px 131px,
-        auto;
-    }
 
     @media (min-width: 750px) {
       width: 723px;
       height: 407px;
-      background-position:
-        center calc(50% + 13px),
-        center;
-
-      .no-js &,
-      .no-webp & {
-        background-image:
-          url("../img/testimonials_video-play.png"),
-          url("../img/testimonials_video-poster-tablet.jpg");
-      }
-
-      .webp & {
-        background-image:
-          url("../img/testimonials_video-play.webp"),
-          url("../img/testimonials_video-poster-tablet.webp");
-      }
     }
 
     @media (min-width: 1170px) {
       width: 1142px;
       height: 642px;
-
-      .no-js &,
-      .no-webp & {
-        background-image:
-          url("../img/testimonials_video-play.png"),
-          url("../img/testimonials_video-poster-desktop.jpg");
-      }
-
-      .webp & {
-        background-image:
-          url("../img/testimonials_video-play.webp"),
-          url("../img/testimonials_video-poster-desktop.webp");
-      }
     }
+  }
+}
+
+.testimonials__video-play {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  display: none;
+  width: 292px;
+  height: 164px;
+  background: center calc(50% + 8px) no-repeat;
+  transform: translateX(50%);
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/testimonials_video-play.png");
+  }
+
+  .webp & {
+    background-image: url("../img/testimonials_video-play.webp");
+  }
+
+  &:hover,
+  &:focus {
+    background-size: 125px 131px;
+    outline: none;
+  }
+
+  @media (min-width: 750px) {
+    width: 723px;
+    height: 407px;
+    background-position: center calc(50% + 13px);
+  }
+
+  @media (min-width: 1170px) {
+    width: 1142px;
+    height: 642px;
   }
 }
 
